@@ -125,3 +125,10 @@ EMAIL_HOST_USER = 'srishtynayak@gmail.com'
 EMAIL_HOST_PASSWORD = 'nayak@12345'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
